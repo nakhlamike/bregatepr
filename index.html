@@ -470,8 +470,14 @@
     applySEO();
   }
 
-  esBtn.addEventListener('click', function () { lang = 'es'; apply(); });
-  enBtn.addEventListener('click', function () { lang = 'en'; apply(); });
+  function track(n, p) { if (window.gtag) gtag('event', n, p || {}); }
+  esBtn.addEventListener('click', function () { lang = 'es'; apply(); track('language_switch', { to: 'es' }); });
+  enBtn.addEventListener('click', function () { lang = 'en'; apply(); track('language_switch', { to: 'en' }); });
+  // Track intent: which CTAs visitors click
+  [['hero.cta1', 'how_it_works'], ['hero.cta2', 'im_a_pro'], ['nav.cta', 'notify_top'], ['nav.pros', 'nav_for_pros']].forEach(function (p) {
+    var el = root.querySelector('[data-i18n="' + p[0] + '"]');
+    if (el) el.addEventListener('click', function () { track('cta_click', { cta: p[1], lang: lang }); });
+  });
   var bregForm = document.getElementById('breg-form');
   bregForm.addEventListener('submit', function (e) {
     e.preventDefault();
