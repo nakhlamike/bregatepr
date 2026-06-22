@@ -1,14 +1,119 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bregate — Tu casa, resuelta</title>
-<meta name="description" content="Bregate es la forma confiable de encontrar, contratar y supervisar a profesionales del hogar en Puerto Rico. Tú eliges al pro, agendas la visita y sigues el trabajo desde tu teléfono — con prueba real de que llegaron.">
+
+<!-- Primary meta (Spanish default; switched to English by the language toggle / ?lang=en) -->
+<title>Bregate — Tu casa, resuelta, aunque no estés | Profesionales del hogar en Puerto Rico</title>
+<meta name="description" content="Bregate es la forma confiable de encontrar, contratar y supervisar a profesionales del hogar en Puerto Rico. Tú eliges al pro, agendas la visita y sigues el trabajo desde tu teléfono — con llegada verificada por GPS. En español e inglés.">
+<meta name="keywords" content="profesionales del hogar Puerto Rico, plomero Puerto Rico, electricista Puerto Rico, contratistas Puerto Rico, servicios para el hogar, handyman Puerto Rico, reparaciones del hogar, mantenimiento Airbnb Puerto Rico, home services Puerto Rico, contractors Puerto Rico">
+<meta name="author" content="Bregate">
+<meta name="publisher" content="Bregate">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<meta name="theme-color" content="#0E5A50">
+<meta name="color-scheme" content="light">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Bregate">
+
+<!-- Geo (Puerto Rico) -->
+<meta name="geo.region" content="US-PR">
+<meta name="geo.placename" content="Puerto Rico">
+<meta name="geo.position" content="18.2208;-66.5901">
+<meta name="ICBM" content="18.2208, -66.5901">
+
+<!-- Canonical + bilingual hreflang -->
+<link rel="canonical" href="https://bregatepr.com/">
+<link rel="alternate" hreflang="es" href="https://bregatepr.com/">
+<link rel="alternate" hreflang="es-PR" href="https://bregatepr.com/">
+<link rel="alternate" hreflang="en" href="https://bregatepr.com/?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://bregatepr.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bregate">
+<meta property="og:title" content="Bregate — Tu casa, resuelta, aunque no estés">
+<meta property="og:description" content="La forma confiable de encontrar, contratar y supervisar a profesionales del hogar en Puerto Rico — con llegada verificada por GPS.">
+<meta property="og:url" content="https://bregatepr.com/">
+<meta property="og:locale" content="es_PR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://bregatepr.com/og-image.png">
+<meta property="og:image:secure_url" content="https://bregatepr.com/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Bregate — Tu casa, resuelta. Hecho en Puerto Rico.">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Bregate — Tu casa, resuelta, aunque no estés">
+<meta name="twitter:description" content="La forma confiable de contratar profesionales del hogar en Puerto Rico — con llegada verificada por GPS.">
+<meta name="twitter:image" content="https://bregatepr.com/og-image.png">
+<meta name="twitter:image:alt" content="Bregate — Tu casa, resuelta.">
+
+<!-- Icons & manifest -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Structured data (Schema.org) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://bregatepr.com/#organization",
+      "name": "Bregate",
+      "url": "https://bregatepr.com/",
+      "logo": "https://bregatepr.com/icon-512.png",
+      "image": "https://bregatepr.com/og-image.png",
+      "slogan": "Tu casa, resuelta.",
+      "description": "Bregate es la forma confiable de encontrar, contratar y supervisar a profesionales del hogar en Puerto Rico, con llegada verificada por GPS y traducción automática español–inglés.",
+      "areaServed": { "@type": "AdministrativeArea", "name": "Puerto Rico" },
+      "knowsLanguage": ["es-PR", "en-US"],
+      "sameAs": []
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://bregatepr.com/#website",
+      "url": "https://bregatepr.com/",
+      "name": "Bregate",
+      "description": "Profesionales del hogar en Puerto Rico, con llegada verificada. Home-service pros in Puerto Rico, with verified arrival.",
+      "publisher": { "@id": "https://bregatepr.com/#organization" },
+      "inLanguage": ["es-PR", "en-US"]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://bregatepr.com/#service",
+      "name": "Bregate — Marketplace de servicios para el hogar",
+      "serviceType": "Home services marketplace",
+      "provider": { "@id": "https://bregatepr.com/#organization" },
+      "areaServed": { "@type": "AdministrativeArea", "name": "Puerto Rico" },
+      "availableLanguage": ["es", "en"],
+      "description": "Encuentra, contrata y supervisa plomeros, electricistas, handymen y más en Puerto Rico. Agenda visitas, chatea con traducción automática y confirma el trabajo con llegada verificada por GPS.",
+      "audience": { "@type": "Audience", "audienceType": "Dueños de hogar y propietarios de Airbnb en Puerto Rico" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://bregatepr.com/#webpage",
+      "url": "https://bregatepr.com/",
+      "name": "Bregate — Tu casa, resuelta, aunque no estés",
+      "isPartOf": { "@id": "https://bregatepr.com/#website" },
+      "about": { "@id": "https://bregatepr.com/#organization" },
+      "inLanguage": "es-PR",
+      "primaryImageOfPage": "https://bregatepr.com/og-image.png"
+    }
+  ]
+}
+</script>
 <style>
   * { box-sizing: border-box; }
   body { margin: 0; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
@@ -291,7 +396,43 @@
   var ES = {};
   root.querySelectorAll('[data-i18n]').forEach(function (el) { ES[el.dataset.i18n] = el.innerHTML; });
 
-  var lang = 'es';
+  // SEO metadata per language — keeps the <head> + URL in sync with the toggle.
+  var SEO = {
+    es: {
+      title: 'Bregate — Tu casa, resuelta, aunque no estés | Profesionales del hogar en Puerto Rico',
+      desc: 'Bregate es la forma confiable de encontrar, contratar y supervisar a profesionales del hogar en Puerto Rico. Tú eliges al pro, agendas la visita y sigues el trabajo desde tu teléfono — con llegada verificada por GPS.',
+      ogTitle: 'Bregate — Tu casa, resuelta, aunque no estés',
+      ogDesc: 'La forma confiable de contratar profesionales del hogar en Puerto Rico — con llegada verificada por GPS.',
+      locale: 'es_PR', url: 'https://bregatepr.com/'
+    },
+    en: {
+      title: "Bregate — Your home, handled, even when you're away | Home-service pros in Puerto Rico",
+      desc: "Bregate is the trustworthy way to find, hire, and oversee home-service pros in Puerto Rico. Pick the pro, schedule the visit, and follow the job from your phone — with GPS-verified arrival.",
+      ogTitle: "Bregate — Your home, handled, even when you're away",
+      ogDesc: 'The trustworthy way to hire home-service pros in Puerto Rico — with GPS-verified arrival.',
+      locale: 'en_US', url: 'https://bregatepr.com/?lang=en'
+    }
+  };
+  function setMeta(attr, key, val) {
+    var el = document.head.querySelector('meta[' + attr + '="' + key + '"]');
+    if (el) el.setAttribute('content', val);
+  }
+  function applySEO() {
+    var m = SEO[lang] || SEO.es;
+    document.title = m.title;
+    setMeta('name', 'description', m.desc);
+    setMeta('property', 'og:title', m.ogTitle);
+    setMeta('property', 'og:description', m.ogDesc);
+    setMeta('property', 'og:url', m.url);
+    setMeta('property', 'og:locale', m.locale);
+    setMeta('name', 'twitter:title', m.ogTitle);
+    setMeta('name', 'twitter:description', m.ogDesc);
+    var can = document.querySelector('link[rel="canonical"]'); if (can) can.setAttribute('href', m.url);
+    document.documentElement.lang = lang;
+    try { history.replaceState(null, '', lang === 'en' ? '/?lang=en' : '/'); } catch (e) {}
+  }
+
+  var lang = (new URLSearchParams(location.search).get('lang') === 'en') ? 'en' : 'es';
   var esBtn = document.getElementById('lng-es');
   var enBtn = document.getElementById('lng-en');
   var email = document.getElementById('breg-email');
@@ -307,7 +448,7 @@
     Object.assign(esBtn.style, lang === 'es' ? on : off);
     Object.assign(enBtn.style, lang === 'en' ? on : off);
     if (email) email.placeholder = lang === 'en' ? 'you@email.com' : 'tu@correo.com';
-    document.documentElement.lang = lang;
+    applySEO();
   }
 
   esBtn.addEventListener('click', function () { lang = 'es'; apply(); });
