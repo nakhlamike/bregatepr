@@ -472,7 +472,34 @@
 
   esBtn.addEventListener('click', function () { lang = 'es'; apply(); });
   enBtn.addEventListener('click', function () { lang = 'en'; apply(); });
-  document.getElementById('breg-form').addEventListener('submit', function (e) { e.preventDefault(); });
+  var bregForm = document.getElementById('breg-form');
+  bregForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var addr = (email && email.value || '').trim();
+    if (!addr) return;
+    var btn = bregForm.querySelector('button[type="submit"]');
+    var orig = btn ? btn.textContent : '';
+    if (btn) { btn.disabled = true; btn.textContent = (lang === 'en' ? 'Sending…' : 'Enviando…'); }
+    fetch('/api/waitlist', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ email: addr, lang: lang })
+    }).then(function (r) { return r.json().catch(function () { return {}; }); })
+      .then(function (d) {
+        if (d && d.ok) {
+          if (window.gtag) gtag('event', 'generate_lead', { method: 'waitlist' });
+          bregForm.innerHTML = '<div style="font-size:18px; font-weight:600; color:var(--gold);">' +
+            (lang === 'en'
+              ? "You're on the list — we'll let you know the moment we launch."
+              : '¡Estás en la lista! Te avisamos apenas lancemos.') + '</div>';
+        } else {
+          if (btn) { btn.disabled = false; btn.textContent = orig; }
+          email.focus();
+        }
+      }).catch(function () {
+        if (btn) { btn.disabled = false; btn.textContent = orig; }
+      });
+  });
 
   apply();
 })();
