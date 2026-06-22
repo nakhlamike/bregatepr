@@ -16,7 +16,11 @@
 <meta name="color-scheme" content="light">
 <meta name="format-detection" content="telephone=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Bregate">
+<meta name="application-name" content="Bregate">
+<meta name="msapplication-TileColor" content="#0E5A50">
+<meta name="rating" content="general">
 
 <!-- Geo (Puerto Rico) -->
 <meta name="geo.region" content="US-PR">
@@ -315,8 +319,9 @@
     <div style="max-width:1000px; margin:0 auto; padding:90px 32px 40px; text-align:center;">
       <h2 data-i18n="foot.title" style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:clamp(40px,6vw,76px); line-height:1; letter-spacing:-.03em; margin:0 0 20px;">Tu casa, resuelta.</h2>
       <p data-i18n="foot.sub" style="font-size:19px; line-height:1.55; color:rgba(251,244,233,.78); max-width:600px; margin:0 auto 36px; text-wrap:pretty;">La forma confiable de resolver el hogar en Puerto Rico — aunque no estés ahí para verlo. Sin spam, sin adivinar, sin barrera de idioma.</p>
-      <form id="breg-form" style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-bottom:18px;">
-        <input id="breg-email" type="email" placeholder="tu@correo.com" style="font-family:inherit; font-size:16px; padding:14px 20px; border-radius:999px; border:1px solid rgba(251,244,233,.25); background:rgba(251,244,233,.06); color:var(--cream); width:300px; max-width:100%; outline:none;">
+      <form id="breg-form" aria-label="Avísame del lanzamiento" style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-bottom:18px;">
+        <label for="breg-email" style="position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0;" data-i18n="foot.emaillabel">Correo electrónico</label>
+        <input id="breg-email" type="email" name="email" autocomplete="email" required aria-required="true" placeholder="tu@correo.com" style="font-family:inherit; font-size:16px; padding:14px 20px; border-radius:999px; border:1px solid rgba(251,244,233,.25); background:rgba(251,244,233,.06); color:var(--cream); width:300px; max-width:100%; outline:none;">
         <button data-i18n="foot.cta" type="submit" style="font-family:inherit; font-size:16px; font-weight:700; color:var(--ink); background:var(--gold); border:none; padding:14px 28px; border-radius:999px; cursor:pointer;">Avísame del lanzamiento</button>
       </form>
       <div style="display:inline-flex; align-items:center; gap:9px; font-size:14px; color:rgba(251,244,233,.6); margin-bottom:64px;">
@@ -388,6 +393,7 @@
     'foot.title': 'Your home, handled.',
     'foot.sub': "The trustworthy way to get home work done in Puerto Rico — even when you're not there to watch. No spam, no guessing, no language barrier.",
     'foot.cta': 'Notify me at launch',
+    'foot.emaillabel': 'Email address',
     'foot.status': 'In the final steps before public launch.',
     'foot.note': 'Bregate (from Puerto Rican Spanish <em>bregar</em>: to handle it). Spanish first, English too, and conversations are translated automatically.'
   };
