@@ -137,7 +137,7 @@
 </head>
 <body>
 
-<div id="root" style="--cream:#FBF4E9; --paper:#FFFDF8; --ink:#2A1D13; --ink2:#7A6651; --terra:#D75A35; --terra-d:#B8431F; --teal:#0E5A50; --teal-l:#14796B; --gold:#E7A33C; --clay:#F3E6D2; --line:rgba(42,29,19,.12); --accent:#D75A35; background:var(--cream); color:var(--ink); font-family:'Instrument Sans',system-ui,sans-serif; min-height:100vh; overflow-x:hidden;">
+<div id="root" style="--cream:#FBF4E9; --paper:#FFFDF8; --ink:#2A1D13; --ink2:#695540; --terra:#D75A35; --terra-d:#A8391A; --teal:#0E5A50; --teal-l:#14796B; --gold:#E7A33C; --clay:#F3E6D2; --line:rgba(42,29,19,.12); --accent:#B8431F; background:var(--cream); color:var(--ink); font-family:'Instrument Sans',system-ui,sans-serif; min-height:100vh; overflow-x:hidden;">
 
   <!-- NAV -->
   <header style="position:sticky; top:0; z-index:50; backdrop-filter:saturate(1.4) blur(10px); background:rgba(251,244,233,.82); border-bottom:1px solid var(--line);">
@@ -154,6 +154,8 @@
       <a href="#avisame" data-i18n="nav.cta" style="font-size:15px; font-weight:600; color:var(--cream); background:var(--accent); padding:9px 18px; border-radius:999px; text-decoration:none;">Avísame del lanzamiento</a>
     </nav>
   </header>
+
+  <main>
 
   <!-- HERO -->
   <section id="top" class="breg-hero" style="max-width:1200px; margin:0 auto; padding:72px 32px 40px; display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center;">
@@ -279,7 +281,7 @@
 
     <!-- emergency strip -->
     <div style="background:var(--clay); border:1px dashed var(--terra); border-radius:18px; padding:20px 26px; display:flex; align-items:center; gap:18px; flex-wrap:wrap;">
-      <span data-i18n="how.emerglabel" style="flex:none; background:var(--terra); color:#fff; font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; padding:6px 12px; border-radius:999px;">Emergencia</span>
+      <span data-i18n="how.emerglabel" style="flex:none; background:var(--terra-d); color:#fff; font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; padding:6px 12px; border-radius:999px;">Emergencia</span>
       <p data-i18n="how.emergtext" style="margin:0; font-size:16px; line-height:1.5; color:var(--ink);">¿Algo urgente? Envía una solicitud de emergencia a los pros disponibles cerca, en vez de agendar para después.</p>
     </div>
   </section>
@@ -288,10 +290,10 @@
   <section id="pros" style="background:var(--teal); color:#fff; margin-top:60px;">
     <div class="breg-pros" style="max-width:1200px; margin:0 auto; padding:84px 32px; display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;">
       <div>
-        <div data-i18n="pros.kicker" style="font-size:14px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-bottom:16px;">Para profesionales</div>
+        <div data-i18n="pros.kicker" style="font-size:14px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:#F3C982; margin-bottom:16px;">Para profesionales</div>
         <h2 data-i18n="pros.title" style="font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:clamp(30px,3.6vw,46px); line-height:1.06; letter-spacing:-.02em; margin:0 0 20px; text-wrap:balance;">Trabajos reales. Reputación honesta. Cero leads basura.</h2>
         <p data-i18n="pros.body" style="margin:0 0 24px; font-size:18px; line-height:1.55; color:rgba(255,255,255,.88); max-width:520px; text-wrap:pretty;">Bregate es una sola app con dos lados; el pro entra en «modo trabajo». Armas tu perfil con tus oficios, tarifas y credenciales, y recibes reservas y mensajes directos.</p>
-        <p data-i18n="pros.tagline" style="margin:0; font-size:16px; line-height:1.5; color:var(--gold); font-weight:600; max-width:520px;">La promesa es simple: trabajos reales, una reputación honesta, y nada de pagar por leads que no llegan a nada.</p>
+        <p data-i18n="pros.tagline" style="margin:0; font-size:16px; line-height:1.5; color:#F3C982; font-weight:600; max-width:520px;">La promesa es simple: trabajos reales, una reputación honesta, y nada de pagar por leads que no llegan a nada.</p>
       </div>
       <div style="display:flex; flex-direction:column; gap:14px;">
         <div style="display:flex; gap:14px; align-items:flex-start; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14); border-radius:16px; padding:20px 22px;">
@@ -313,6 +315,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- CLOSING / FOOTER -->
   <footer id="avisame" style="background:var(--ink); color:var(--cream);">
