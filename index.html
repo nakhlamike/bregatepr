@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bregate — Tu casa, resuelta</title>
+<meta name="description" content="Bregate es la forma confiable de encontrar, contratar y supervisar a profesionales del hogar en Puerto Rico. Tú eliges al pro, agendas la visita y sigues el trabajo desde tu teléfono — con prueba real de que llegaron.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  @keyframes bregPulse { 0%,100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.06); opacity: .85; } }
+  ::selection { background: #E7A33C; color: #2A1D13; }
+  a { transition: opacity .15s ease; }
+  a:hover { opacity: .82; }
+  @media (max-width: 860px) {
+    .breg-hero { grid-template-columns: 1fr !important; }
+    .breg-grid-3 { grid-template-columns: 1fr !important; }
+    .breg-grid-2 { grid-template-columns: 1fr !important; }
+    .breg-pros { grid-template-columns: 1fr !important; }
+    .breg-s4 { grid-template-columns: 1fr !important; }
+    .breg-navlinks { display: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div id="root" style="--cream:#FBF4E9; --paper:#FFFDF8; --ink:#2A1D13; --ink2:#7A6651; --terra:#D75A35; --terra-d:#B8431F; --teal:#0E5A50; --teal-l:#14796B; --gold:#E7A33C; --clay:#F3E6D2; --line:rgba(42,29,19,.12); --accent:#D75A35; background:var(--cream); color:var(--ink); font-family:'Instrument Sans',system-ui,sans-serif; min-height:100vh; overflow-x:hidden;">
+
+  <!-- NAV -->
+  <header style="position:sticky; top:0; z-index:50; backdrop-filter:saturate(1.4) blur(10px); background:rgba(251,244,233,.82); border-bottom:1px solid var(--line);">
+    <nav style="max-width:1200px; margin:0 auto; padding:16px 32px; display:flex; align-items:center; gap:28px;">
+      <a href="#top" style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:23px; letter-spacing:-.02em; color:var(--ink); text-decoration:none; display:flex; align-items:baseline; gap:1px;">Bregate<span style="color:var(--terra); font-size:26px; line-height:0;">.</span></a>
+      <div style="flex:1;"></div>
+      <a href="#problema" data-i18n="nav.problem" class="breg-navlinks" style="font-size:15px; font-weight:500; color:var(--ink2); text-decoration:none;">El problema</a>
+      <a href="#como" data-i18n="nav.how" class="breg-navlinks" style="font-size:15px; font-weight:500; color:var(--ink2); text-decoration:none;">Cómo funciona</a>
+      <a href="#pros" data-i18n="nav.pros" class="breg-navlinks" style="font-size:15px; font-weight:500; color:var(--ink2); text-decoration:none;">Para profesionales</a>
+      <div style="display:flex; align-items:center; border:1px solid var(--line); border-radius:999px; padding:3px; gap:2px; background:var(--paper);">
+        <button id="lng-es" type="button" style="border:none; cursor:pointer; font-family:inherit; font-size:13px; font-weight:600; padding:5px 11px; border-radius:999px; background:var(--ink); color:var(--cream);">ES</button>
+        <button id="lng-en" type="button" style="border:none; cursor:pointer; font-family:inherit; font-size:13px; font-weight:600; padding:5px 11px; border-radius:999px; background:transparent; color:var(--ink2);">EN</button>
+      </div>
+      <a href="#avisame" data-i18n="nav.cta" style="font-size:15px; font-weight:600; color:var(--cream); background:var(--accent); padding:9px 18px; border-radius:999px; text-decoration:none;">Avísame del lanzamiento</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="top" class="breg-hero" style="max-width:1200px; margin:0 auto; padding:72px 32px 40px; display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center;">
+    <div>
+      <div style="display:inline-flex; align-items:center; gap:8px; background:var(--clay); border:1px solid var(--line); padding:7px 14px; border-radius:999px; font-size:13px; font-weight:600; color:var(--terra-d); letter-spacing:.02em; margin-bottom:24px;">
+        <span style="width:7px; height:7px; border-radius:50%; background:var(--terra); display:inline-block;"></span>
+        <span data-i18n="hero.badge">Hecho en Puerto Rico</span>
+      </div>
+      <h1 data-i18n="hero.title" style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:clamp(40px,5.2vw,68px); line-height:1.02; letter-spacing:-.03em; margin:0 0 22px;">Tu casa, <span style="color:var(--teal);">resuelta</span> — aunque no estés.</h1>
+      <p data-i18n="hero.sub" style="font-size:19px; line-height:1.55; color:var(--ink2); max-width:520px; margin:0 0 32px; text-wrap:pretty;">Bregate es la forma confiable de encontrar, contratar y supervisar a profesionales del hogar en Puerto Rico. Tú eliges al pro, agendas la visita y sigues el trabajo desde tu teléfono — con prueba real de que llegaron.</p>
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <a href="#como" data-i18n="hero.cta1" style="font-size:16px; font-weight:600; color:var(--cream); background:var(--ink); padding:14px 26px; border-radius:999px; text-decoration:none;">Cómo funciona</a>
+        <a href="#pros" data-i18n="hero.cta2" style="font-size:16px; font-weight:600; color:var(--ink); background:transparent; border:1.5px solid var(--ink); padding:14px 26px; border-radius:999px; text-decoration:none;">Soy profesional</a>
+      </div>
+    </div>
+
+    <!-- hero visual: teal panel + sun + definition card -->
+    <div style="position:relative; aspect-ratio:1/1; max-width:460px; justify-self:center; width:100%;">
+      <div style="position:absolute; inset:0; background:var(--teal); border-radius:32px; overflow:hidden;">
+        <div style="position:absolute; top:-60px; right:-40px; width:230px; height:230px; border-radius:50%; background:var(--gold); animation:bregPulse 6s ease-in-out infinite;"></div>
+        <div style="position:absolute; bottom:-70px; left:-50px; width:180px; height:180px; border-radius:50%; background:var(--terra);"></div>
+        <div style="position:absolute; top:28px; left:30px; width:60px; height:60px; border:2px solid rgba(255,255,255,.35); border-radius:50%;"></div>
+        <div style="position:absolute; top:30%; left:50%; transform:translate(-50%,-30%); display:flex; align-items:center; gap:10px; background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.3); padding:9px 16px; border-radius:999px; color:#fff; font-weight:600; font-size:14px; backdrop-filter:blur(4px);">
+          <span style="width:22px; height:22px; border-radius:50%; background:#fff; color:var(--teal); display:grid; place-items:center; font-size:14px; font-weight:800;">✓</span>
+          <span data-i18n="hero.stamp">Llegada verificada</span>
+        </div>
+      </div>
+      <!-- definition card overlapping bottom -->
+      <div style="position:absolute; left:24px; bottom:-26px; right:24px; background:var(--paper); border:1px solid var(--line); border-radius:20px; padding:22px 24px; box-shadow:0 18px 40px rgba(42,29,19,.14);">
+        <div style="display:flex; align-items:baseline; gap:10px; margin-bottom:6px;">
+          <span style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:26px; color:var(--ink);">bregar</span>
+          <span data-i18n="hero.defpron" style="font-size:13px; color:var(--ink2); font-style:italic;">v. · español de Puerto Rico</span>
+        </div>
+        <p data-i18n="hero.deftext" style="margin:0 0 10px; font-size:16px; color:var(--ink); line-height:1.4;">resolver, ocuparse, lograrlo.</p>
+        <p data-i18n="hero.deftag" style="margin:0; font-size:14px; font-weight:600; color:var(--terra-d);">Bregate te resuelve la casa.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section id="problema" style="max-width:1200px; margin:0 auto; padding:80px 32px 40px;">
+    <div style="max-width:760px; margin-bottom:44px;">
+      <div data-i18n="prob.kicker" style="font-size:14px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--terra-d); margin-bottom:16px;">El problema</div>
+      <h2 data-i18n="prob.title" style="font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:clamp(30px,3.6vw,46px); line-height:1.08; letter-spacing:-.02em; margin:0; text-wrap:balance;">Contratar para tu hogar da ansiedad. Peor aún cuando no puedes estar ahí.</h2>
+    </div>
+    <div class="breg-grid-3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px;">
+      <div style="background:var(--clay); border-radius:20px; padding:28px 26px;">
+        <div style="font-family:'Bricolage Grotesque',sans-serif; font-size:30px; margin-bottom:16px;">🛏️</div>
+        <h3 data-i18n="prob.c1t" style="font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:20px; margin:0 0 10px; letter-spacing:-.01em;">Tu Airbnb, entre huéspedes</h3>
+        <p data-i18n="prob.c1b" style="margin:0; font-size:15.5px; line-height:1.55; color:var(--ink2);">Un huésped reporta el aire roto. El próximo llega mañana y tú estás fuera de la isla. Necesitas a alguien confiable hoy.</p>
+      </div>
+      <div style="background:var(--clay); border-radius:20px; padding:28px 26px;">
+        <div style="font-family:'Bricolage Grotesque',sans-serif; font-size:30px; margin-bottom:16px;">🏡</div>
+        <h3 data-i18n="prob.c2t" style="font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:20px; margin:0 0 10px; letter-spacing:-.01em;">Tus padres, a la distancia</h3>
+        <p data-i18n="prob.c2b" style="margin:0; font-size:15.5px; line-height:1.55; color:var(--ink2);">Tus papás viven en Puerto Rico y algo se dañó. Tú vives en Florida y quieres conseguirles a alguien de confianza sin tener que volar.</p>
+      </div>
+      <div style="background:var(--clay); border-radius:20px; padding:28px 26px;">
+        <div style="font-family:'Bricolage Grotesque',sans-serif; font-size:30px; margin-bottom:16px;">⏳</div>
+        <h3 data-i18n="prob.c3t" style="font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:20px; margin:0 0 10px; letter-spacing:-.01em;">Tu tiempo, de vuelta</h3>
+        <p data-i18n="prob.c3b" style="margin:0; font-size:15.5px; line-height:1.55; color:var(--ink2);">Eres dueño local y ocupado. No tienes tiempo de perseguir a un buen plomero y rezar para que aparezca.</p>
+      </div>
+    </div>
+    <p data-i18n="prob.foot" style="margin:32px 0 0; font-size:18px; line-height:1.55; color:var(--ink); max-width:780px; text-wrap:pretty;">Las opciones de siempre venden tu número a un montón de contratistas que te llenan de llamadas. <strong style="color:var(--terra-d);">Bregate elimina esa ansiedad.</strong></p>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="como" style="max-width:1200px; margin:0 auto; padding:80px 32px 40px;">
+    <div style="max-width:760px; margin-bottom:44px;">
+      <div data-i18n="how.kicker" style="font-size:14px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--terra-d); margin-bottom:16px;">Cómo funciona</div>
+      <h2 data-i18n="how.title" style="font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:clamp(30px,3.6vw,46px); line-height:1.08; letter-spacing:-.02em; margin:0; text-wrap:balance;">Eliges, agendas y sigues el trabajo — desde donde estés.</h2>
+    </div>
+
+    <!-- steps 1-3 -->
+    <div class="breg-grid-3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-bottom:22px;">
+      <div style="background:var(--paper); border:1px solid var(--line); border-radius:20px; padding:28px 26px;">
+        <div style="width:40px; height:40px; border-radius:50%; background:var(--ink); color:var(--cream); display:grid; place-items:center; font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:18px; margin-bottom:18px;">1</div>
+        <h3 data-i18n="how.s1t" style="font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:20px; margin:0 0 10px; letter-spacing:-.01em;">Busca al pro indicado</h3>
+        <p data-i18n="how.s1b" style="margin:0; font-size:15.5px; line-height:1.55; color:var(--ink2);">Explora profesionales por oficio: ves su calificación, reseñas reales, tarifas y credenciales — y a qué distancia están, aunque puedes contratar a quien quieras.</p>
+      </div>
+      <div style="background:var(--paper); border:1px solid var(--line); border-radius:20px; padding:28px 26px;">
+        <div style="width:40px; height:40px; border-radius:50%; background:var(--ink); color:var(--cream); display:grid; place-items:center; font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:18px; margin-bottom:18px;">2</div>
+        <h3 data-i18n="how.s2t" style="font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:20px; margin:0 0 10px; letter-spacing:-.01em;">Escríbeles en tu idioma</h3>
+        <p data-i18n="how.s2b" style="margin:0; font-size:15.5px; line-height:1.55; color:var(--ink2);">Chatea antes de comprometerte. Los mensajes se traducen solos: tú escribes en español, el pro en inglés, y cada uno lee en su idioma.</p>
+      </div>
+      <div style="background:var(--paper); border:1px solid var(--line); border-radius:20px; padding:28px 26px;">
+        <div style="width:40px; height:40px; border-radius:50%; background:var(--ink); color:var(--cream); display:grid; place-items:center; font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:18px; margin-bottom:18px;">3</div>
+        <h3 data-i18n="how.s3t" style="font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:20px; margin:0 0 10px; letter-spacing:-.01em;">Agenda la visita</h3>
+        <p data-i18n="how.s3b" style="margin:0; font-size:15.5px; line-height:1.55; color:var(--ink2);">Elige la propiedad y el momento — lo antes posible o un día y hora exactos. La ves en el mapa y confirmas.</p>
+      </div>
+    </div>
+
+    <!-- step 4 feature: verified visit -->
+    <div class="breg-s4" style="background:var(--teal); border-radius:24px; padding:40px 44px; display:grid; grid-template-columns:1.4fr 1fr; gap:40px; align-items:center; margin-bottom:22px; overflow:hidden; position:relative;">
+      <div style="position:relative; z-index:2;">
+        <div style="display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,.16); padding:6px 13px; border-radius:999px; margin-bottom:18px;">
+          <span style="width:30px; height:30px; border-radius:50%; background:#fff; color:var(--teal); display:grid; place-items:center; font-weight:800; font-size:16px;">4</span>
+          <span data-i18n="how.s4tag" style="color:#fff; font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;">El sello de confianza</span>
+        </div>
+        <h3 data-i18n="how.s4t" style="font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:clamp(26px,3vw,36px); line-height:1.05; letter-spacing:-.02em; color:#fff; margin:0 0 14px;">La visita verificada</h3>
+        <p data-i18n="how.s4b" style="margin:0; font-size:17px; line-height:1.55; color:rgba(255,255,255,.9); max-width:560px; text-wrap:pretty;">Aquí Bregate se gana tu confianza. El pro marca «voy en camino» y lo ves moverse en el mapa. Al llegar, la app confirma con la ubicación del teléfono que de verdad está en tu propiedad — no algo que se finge desde el sofá.</p>
+      </div>
+      <div style="position:relative; height:200px;">
+        <div style="position:absolute; right:0; top:50%; transform:translateY(-50%); width:200px; height:200px; border-radius:50%; background:var(--gold); opacity:.9;"></div>
+        <div style="position:absolute; right:50px; top:50%; transform:translateY(-50%); width:130px; height:130px; border-radius:50%; background:#fff; display:grid; place-items:center; box-shadow:0 16px 40px rgba(0,0,0,.22);">
+          <span style="font-size:60px; color:var(--teal); line-height:1;">✓</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- steps 5-6 -->
+    <div class="breg-grid-2" style="display:grid; grid-template-columns:repeat(2,1fr); gap:22px; margin-bottom:22px;">
+      <div style="background:var(--paper); border:1px solid var(--line); border-radius:20px; padding:28px 26px;">
+        <div style="width:40px; height:40px; border-radius:50%; background:var(--ink); color:var(--cream); display:grid; place-items:center; font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:18px; margin-bottom:18px;">5</div>
+        <h3 data-i18n="how.s5t" style="font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:20px; margin:0 0 10px; letter-spacing:-.01em;">Confirma y reseña</h3>
+        <p data-i18n="how.s5b" style="margin:0; font-size:15.5px; line-height:1.55; color:var(--ink2);">Al terminar, confirmas que todo salió bien y dejas tu reseña. Como está atada a una visita verificada real, tiene peso — no es un comentario anónimo de quién sabe dónde.</p>
+      </div>
+      <div style="background:var(--paper); border:1px solid var(--line); border-radius:20px; padding:28px 26px;">
+        <div style="width:40px; height:40px; border-radius:50%; background:var(--ink); color:var(--cream); display:grid; place-items:center; font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:18px; margin-bottom:18px;">6</div>
+        <h3 data-i18n="how.s6t" style="font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:20px; margin:0 0 10px; letter-spacing:-.01em;">Si algo falla, tienes salida</h3>
+        <p data-i18n="how.s6b" style="margin:0; font-size:15.5px; line-height:1.55; color:var(--ink2);">¿No llegó o el trabajo no quedó bien? Abres una disputa dentro de la app. No te quedas solo.</p>
+      </div>
+    </div>
+
+    <!-- emergency strip -->
+    <div style="background:var(--clay); border:1px dashed var(--terra); border-radius:18px; padding:20px 26px; display:flex; align-items:center; gap:18px; flex-wrap:wrap;">
+      <span data-i18n="how.emerglabel" style="flex:none; background:var(--terra); color:#fff; font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; padding:6px 12px; border-radius:999px;">Emergencia</span>
+      <p data-i18n="how.emergtext" style="margin:0; font-size:16px; line-height:1.5; color:var(--ink);">¿Algo urgente? Envía una solicitud de emergencia a los pros disponibles cerca, en vez de agendar para después.</p>
+    </div>
+  </section>
+
+  <!-- FOR PROS -->
+  <section id="pros" style="background:var(--teal); color:#fff; margin-top:60px;">
+    <div class="breg-pros" style="max-width:1200px; margin:0 auto; padding:84px 32px; display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;">
+      <div>
+        <div data-i18n="pros.kicker" style="font-size:14px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-bottom:16px;">Para profesionales</div>
+        <h2 data-i18n="pros.title" style="font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:clamp(30px,3.6vw,46px); line-height:1.06; letter-spacing:-.02em; margin:0 0 20px; text-wrap:balance;">Trabajos reales. Reputación honesta. Cero leads basura.</h2>
+        <p data-i18n="pros.body" style="margin:0 0 24px; font-size:18px; line-height:1.55; color:rgba(255,255,255,.88); max-width:520px; text-wrap:pretty;">Bregate es una sola app con dos lados; el pro entra en «modo trabajo». Armas tu perfil con tus oficios, tarifas y credenciales, y recibes reservas y mensajes directos.</p>
+        <p data-i18n="pros.tagline" style="margin:0; font-size:16px; line-height:1.5; color:var(--gold); font-weight:600; max-width:520px;">La promesa es simple: trabajos reales, una reputación honesta, y nada de pagar por leads que no llegan a nada.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <div style="display:flex; gap:14px; align-items:flex-start; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14); border-radius:16px; padding:20px 22px;">
+          <span style="flex:none; width:26px; height:26px; border-radius:50%; background:var(--gold); color:var(--teal); display:grid; place-items:center; font-weight:800; font-size:14px;">✓</span>
+          <p data-i18n="pros.p1" style="margin:0; font-size:16px; line-height:1.5; color:#fff;">Reservas y mensajes directos de clientes, sin intermediarios.</p>
+        </div>
+        <div style="display:flex; gap:14px; align-items:flex-start; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14); border-radius:16px; padding:20px 22px;">
+          <span style="flex:none; width:26px; height:26px; border-radius:50%; background:var(--gold); color:var(--teal); display:grid; place-items:center; font-weight:800; font-size:14px;">✓</span>
+          <p data-i18n="pros.p2" style="margin:0; font-size:16px; line-height:1.5; color:#fff;">Un interruptor «on-call» solo para emergencias: apágalo y dejas de recibir trabajos urgentes, pero sigues recibiendo reservas normales.</p>
+        </div>
+        <div style="display:flex; gap:14px; align-items:flex-start; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14); border-radius:16px; padding:20px 22px;">
+          <span style="flex:none; width:26px; height:26px; border-radius:50%; background:var(--gold); color:var(--teal); display:grid; place-items:center; font-weight:800; font-size:14px;">✓</span>
+          <p data-i18n="pros.p3" style="margin:0; font-size:16px; line-height:1.5; color:#fff;">Te guía en cada trabajo: voy en camino → llegué → completado, con llegada verificada.</p>
+        </div>
+        <div style="display:flex; gap:14px; align-items:flex-start; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14); border-radius:16px; padding:20px 22px;">
+          <span style="flex:none; width:26px; height:26px; border-radius:50%; background:var(--gold); color:var(--teal); display:grid; place-items:center; font-weight:800; font-size:14px;">✓</span>
+          <p data-i18n="pros.p4" style="margin:0; font-size:16px; line-height:1.5; color:#fff;">Construyes un historial de visitas verificadas y reseñas genuinas. Una reputación difícil de fingir.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING / FOOTER -->
+  <footer id="avisame" style="background:var(--ink); color:var(--cream);">
+    <div style="max-width:1000px; margin:0 auto; padding:90px 32px 40px; text-align:center;">
+      <h2 data-i18n="foot.title" style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:clamp(40px,6vw,76px); line-height:1; letter-spacing:-.03em; margin:0 0 20px;">Tu casa, resuelta.</h2>
+      <p data-i18n="foot.sub" style="font-size:19px; line-height:1.55; color:rgba(251,244,233,.78); max-width:600px; margin:0 auto 36px; text-wrap:pretty;">La forma confiable de resolver el hogar en Puerto Rico — aunque no estés ahí para verlo. Sin spam, sin adivinar, sin barrera de idioma.</p>
+      <form id="breg-form" style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-bottom:18px;">
+        <input id="breg-email" type="email" placeholder="tu@correo.com" style="font-family:inherit; font-size:16px; padding:14px 20px; border-radius:999px; border:1px solid rgba(251,244,233,.25); background:rgba(251,244,233,.06); color:var(--cream); width:300px; max-width:100%; outline:none;">
+        <button data-i18n="foot.cta" type="submit" style="font-family:inherit; font-size:16px; font-weight:700; color:var(--ink); background:var(--gold); border:none; padding:14px 28px; border-radius:999px; cursor:pointer;">Avísame del lanzamiento</button>
+      </form>
+      <div style="display:inline-flex; align-items:center; gap:9px; font-size:14px; color:rgba(251,244,233,.6); margin-bottom:64px;">
+        <span style="width:8px; height:8px; border-radius:50%; background:var(--gold); display:inline-block;"></span>
+        <span data-i18n="foot.status">En los pasos finales antes del lanzamiento público.</span>
+      </div>
+      <div style="border-top:1px solid rgba(251,244,233,.14); padding-top:28px; display:flex; flex-wrap:wrap; gap:20px; align-items:center; justify-content:space-between; text-align:left;">
+        <span style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:20px;">Bregate<span style="color:var(--terra);">.</span></span>
+        <p data-i18n="foot.note" style="margin:0; font-size:13.5px; line-height:1.5; color:rgba(251,244,233,.55); max-width:560px;">Bregate (del puertorriqueño <em>bregar</em>: resolver). Hablamos español primero, también inglés, y traducimos las conversaciones automáticamente.</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var root = document.getElementById('root');
+
+  // English dictionary (Spanish is the source markup, captured on load).
+  var EN = {
+    'nav.problem': 'The problem',
+    'nav.how': 'How it works',
+    'nav.pros': 'For pros',
+    'nav.cta': 'Notify me at launch',
+    'hero.badge': 'Made in Puerto Rico',
+    'hero.title': 'Your home, <span style="color:var(--teal);">handled</span> — even when you\'re away.',
+    'hero.sub': "Bregate is the trustworthy way to find, hire, and oversee home-service pros in Puerto Rico. You pick the pro, schedule the visit, and follow the job from your phone — with real proof they showed up.",
+    'hero.cta1': 'How it works',
+    'hero.cta2': "I'm a pro",
+    'hero.stamp': 'Arrival verified',
+    'hero.defpron': 'v. · Puerto Rican Spanish',
+    'hero.deftext': 'to handle it, to deal with it, to get it done.',
+    'hero.deftag': 'Bregate gets your home stuff handled.',
+    'prob.kicker': 'The problem',
+    'prob.title': "Hiring for your home is stressful. Worse when you can't be there to watch.",
+    'prob.c1t': 'Your Airbnb, between guests',
+    'prob.c1b': "A guest reports the AC is broken. The next arrives tomorrow and you're off-island. You need someone reliable today.",
+    'prob.c2t': 'Family, from afar',
+    'prob.c2b': 'Your parents live in PR and something breaks. You live in Florida and want a trustworthy repair without flying down.',
+    'prob.c3t': 'Your time, back',
+    'prob.c3b': "You're a busy local homeowner. No time to chase a good plumber and pray they show up.",
+    'prob.foot': 'The usual options sell your number to a pile of contractors who flood you with calls. <strong style="color:var(--terra-d);">Bregate removes that anxiety.</strong>',
+    'how.kicker': 'How it works',
+    'how.title': 'Choose, schedule, and follow the job — from anywhere.',
+    'how.s1t': 'Find the right pro',
+    'how.s1b': 'Browse pros by trade: see ratings, real reviews, rates, and credentials — plus how far they are, though you can hire anyone you like.',
+    'how.s2t': 'Message them in your language',
+    'how.s2b': 'Chat before committing. Messages auto-translate: you write in Spanish, the pro in English, and each of you reads in your own language.',
+    'how.s3t': 'Book a time',
+    'how.s3b': 'Pick the property and the time — as soon as possible or an exact day and hour. See it on the map and confirm.',
+    'how.s4tag': 'The trust hallmark',
+    'how.s4t': 'The verified visit',
+    'how.s4b': "Here's where Bregate earns trust. The pro marks “on my way” and you watch them move on the map. On arrival, the app confirms with the phone's location that they're genuinely at your property — not faked from the couch.",
+    'how.s5t': 'Confirm and review',
+    'how.s5b': "When it's done, you confirm everything went well and leave a review. Because it's tied to a real verified visit, it carries weight — not an anonymous comment from who-knows-where.",
+    'how.s6t': 'If something goes wrong',
+    'how.s6b': "No-show, or the work wasn't right? Raise a dispute inside the app. You're never left on your own.",
+    'how.emerglabel': 'Emergency',
+    'how.emergtext': 'Something urgent? Send an emergency request to available pros nearby instead of scheduling for later.',
+    'pros.kicker': 'For pros',
+    'pros.title': 'Real bookings. Honest reputation. Zero junk leads.',
+    'pros.body': "Bregate is one app with two sides; the pro flips into “work mode.” Build your profile with your trades, rates, and credentials, and receive bookings and messages directly.",
+    'pros.tagline': 'The promise is simple: real bookings, an honest reputation system, and no getting nickel-and-dimed for leads that go nowhere.',
+    'pros.p1': 'Direct bookings and messages from customers — no middlemen.',
+    'pros.p2': "An “on-call” switch for emergencies only: turn it off and you stop getting urgent jobs, but still receive normal bookings.",
+    'pros.p3': 'Guides you through every job: on my way → arrived → completed, with verified arrival.',
+    'pros.p4': 'Build a track record of verified visits and genuine reviews. A reputation that’s hard to fake.',
+    'foot.title': 'Your home, handled.',
+    'foot.sub': "The trustworthy way to get home work done in Puerto Rico — even when you're not there to watch. No spam, no guessing, no language barrier.",
+    'foot.cta': 'Notify me at launch',
+    'foot.status': 'In the final steps before public launch.',
+    'foot.note': 'Bregate (from Puerto Rican Spanish <em>bregar</em>: to handle it). Spanish first, English too, and conversations are translated automatically.'
+  };
+
+  // Capture the Spanish source.
+  var ES = {};
+  root.querySelectorAll('[data-i18n]').forEach(function (el) { ES[el.dataset.i18n] = el.innerHTML; });
+
+  var lang = 'es';
+  var esBtn = document.getElementById('lng-es');
+  var enBtn = document.getElementById('lng-en');
+  var email = document.getElementById('breg-email');
+
+  function apply() {
+    root.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var k = el.dataset.i18n;
+      if (lang === 'en') { if (EN[k] != null) el.innerHTML = EN[k]; }
+      else if (ES[k] != null) { el.innerHTML = ES[k]; }
+    });
+    var on = { background: 'var(--ink)', color: 'var(--cream)' };
+    var off = { background: 'transparent', color: 'var(--ink2)' };
+    Object.assign(esBtn.style, lang === 'es' ? on : off);
+    Object.assign(enBtn.style, lang === 'en' ? on : off);
+    if (email) email.placeholder = lang === 'en' ? 'you@email.com' : 'tu@correo.com';
+    document.documentElement.lang = lang;
+  }
+
+  esBtn.addEventListener('click', function () { lang = 'es'; apply(); });
+  enBtn.addEventListener('click', function () { lang = 'en'; apply(); });
+  document.getElementById('breg-form').addEventListener('submit', function (e) { e.preventDefault(); });
+
+  apply();
+})();
+</script>
+</body>
+</html>
