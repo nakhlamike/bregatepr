@@ -175,9 +175,21 @@
       </div>
       <h1 data-i18n="hero.title" style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:clamp(40px,5.2vw,68px); line-height:1.02; letter-spacing:-.03em; margin:0 0 22px;">Tu casa en <span style="color:var(--teal);">buenas manos</span>, aunque no estés.</h1>
       <p data-i18n="hero.sub" style="font-size:19px; line-height:1.55; color:var(--ink2); max-width:520px; margin:0 0 32px; text-wrap:pretty;">Bregate es la forma confiable de encontrar, contratar y supervisar a profesionales del hogar en Puerto Rico. Tú eliges al pro, agendas la visita y sigues el trabajo desde tu teléfono, con prueba real de que llegaron.</p>
-      <div style="display:flex; gap:14px; flex-wrap:wrap;">
-        <a href="#como" data-i18n="hero.cta1" style="font-size:16px; font-weight:600; color:var(--cream); background:var(--ink); padding:14px 26px; border-radius:999px; text-decoration:none;">Cómo funciona</a>
-        <a href="#pros" data-i18n="hero.cta2" style="font-size:16px; font-weight:600; color:var(--ink); background:transparent; border:1.5px solid var(--ink); padding:14px 26px; border-radius:999px; text-decoration:none;">Soy profesional</a>
+      <div style="display:flex; flex-direction:column; gap:18px; align-items:flex-start;">
+        <div id="dl-row" style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="#avisame" id="dl-ios" data-store="ios" aria-label="App Store" style="display:inline-flex; align-items:center; gap:11px; background:var(--ink); color:var(--cream); padding:11px 20px; border-radius:14px; text-decoration:none;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.365 1.43c0 1.14-.42 2.2-1.12 2.98-.84.94-2.2 1.66-3.36 1.57-.14-1.13.42-2.32 1.1-3.06.78-.86 2.16-1.5 3.38-1.49zM20.7 17.06c-.6 1.39-.9 2-1.67 3.23-1.07 1.72-2.58 3.86-4.45 3.87-1.66.02-2.09-1.08-4.35-1.07-2.26.01-2.73 1.09-4.39 1.07-1.87-.02-3.3-1.95-4.37-3.67-2.99-4.8-3.3-10.43-1.46-13.42 1.31-2.13 3.38-3.38 5.32-3.38 1.98 0 3.22 1.09 4.86 1.09 1.59 0 2.56-1.09 4.85-1.09 1.73 0 3.56.94 4.87 2.57-4.28 2.34-3.58 8.45.16 9.9z"/></svg>
+            <span style="display:flex; flex-direction:column; line-height:1.12; text-align:left;"><span data-i18n="dl.ios.s" style="font-size:11px; opacity:.82; font-weight:500;">Descárgala en</span><span data-i18n="dl.ios.b" style="font-size:18px; font-weight:700;">App Store</span></span>
+          </a>
+          <a href="#avisame" id="dl-android" data-store="android" aria-label="Google Play" style="display:inline-flex; align-items:center; gap:11px; background:var(--ink); color:var(--cream); padding:11px 20px; border-radius:14px; text-decoration:none;">
+            <svg width="20" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 2.5v19c0 .73.8 1.16 1.4.76l15-9.5c.53-.34.53-1.18 0-1.52l-15-9.5C3.8 1.34 3 1.77 3 2.5z"/></svg>
+            <span style="display:flex; flex-direction:column; line-height:1.12; text-align:left;"><span data-i18n="dl.and.s" style="font-size:11px; opacity:.82; font-weight:500;">Disponible en</span><span data-i18n="dl.and.b" style="font-size:18px; font-weight:700;">Google Play</span></span>
+          </a>
+        </div>
+        <div style="display:flex; gap:18px; flex-wrap:wrap; align-items:center;">
+          <a href="#como" data-i18n="hero.cta1" style="font-size:16px; font-weight:600; color:var(--ink); background:transparent; border:1.5px solid var(--ink); padding:12px 24px; border-radius:999px; text-decoration:none;">Cómo funciona</a>
+          <a href="#pros" data-i18n="hero.cta2" style="font-size:15px; font-weight:600; color:var(--ink2); background:transparent; text-decoration:none;">Soy profesional →</a>
+        </div>
       </div>
     </div>
 
@@ -364,7 +376,11 @@
     'hero.title': 'Your home in <span style="color:var(--teal);">good hands</span>, even when you\'re away.',
     'hero.sub': "Bregate is the trustworthy way to find, hire, and oversee home-service pros in Puerto Rico. You pick the pro, schedule the visit, and follow the job from your phone, with real proof they showed up.",
     'hero.cta1': 'How it works',
-    'hero.cta2': "I'm a pro",
+    'hero.cta2': "I'm a pro →",
+    'dl.ios.s': 'Download on the',
+    'dl.ios.b': 'App Store',
+    'dl.and.s': 'Get it on',
+    'dl.and.b': 'Google Play',
     'hero.stamp': 'Arrival verified',
     'hero.defpron': 'v. · Puerto Rican Spanish',
     'hero.deftext': 'to handle it, to deal with it, to get it done.',
@@ -477,6 +493,20 @@
   [['hero.cta1', 'how_it_works'], ['hero.cta2', 'im_a_pro'], ['nav.cta', 'notify_top'], ['nav.pros', 'nav_for_pros']].forEach(function (p) {
     var el = root.querySelector('[data-i18n="' + p[0] + '"]');
     if (el) el.addEventListener('click', function () { track('cta_click', { cta: p[1], lang: lang }); });
+  });
+  // App download buttons. Set these the day you publish; empty = pre-launch
+  // (tracks the click + scrolls to the waitlist so download-intent is captured as a lead).
+  var APP_STORE_URL = '';  // e.g. https://apps.apple.com/app/idXXXXXXXXXX
+  var PLAY_URL = '';       // e.g. https://play.google.com/store/apps/details?id=com.bregate.customer
+  ['dl-ios', 'dl-android'].forEach(function (id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener('click', function (e) {
+      var store = el.getAttribute('data-store');
+      var url = store === 'ios' ? APP_STORE_URL : PLAY_URL;
+      track('app_download_click', { store: store, live: !!url, lang: lang });
+      if (url) { e.preventDefault(); window.open(url, '_blank', 'noopener'); }
+    });
   });
   var bregForm = document.getElementById('breg-form');
   bregForm.addEventListener('submit', function (e) {
